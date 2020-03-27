@@ -5,6 +5,7 @@ Visualising local job opportunities and everything in between
 Project Description
 --------------------
 Scraped some Data Science Job listings within 150 mile radius of Tampa, and analysing what are some hot things (in terms of tech, skills, and knowledge) with Shiny.   
+*Due to privacy reasons (and saving me a bill) everything related to ggmap is turned into static response. And key has been removed. If you're running the file, please provide it your Google API key. Sorry about inconvenience!*    
 
 Author
 -------
