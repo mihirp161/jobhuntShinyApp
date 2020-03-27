@@ -27,7 +27,7 @@ Demo
 ------
 *Shiny Example*
 
-<img src="https://github.com/opendatasurgeon/jobhuntShinyApp/demo/jobHunt_demo.gif " width="810" height="350" />
+<img src="https://github.com/opendatasurgeon/jobhuntShinyApp/blob/master/demo/jobHunt_demo.gif " width="810" height="350" />
 
 License
 --------
