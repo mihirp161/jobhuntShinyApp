@@ -12,8 +12,8 @@ Mihir Patel
 
 Status
 ------
-90% done 
-*htmlwidgets are giving some trouble in Shiny so will see if I can implement them in time.*
+90% done       
+*htmlwidgets are giving some trouble in Shiny so I'll see if I can implement them later.*
 
 Language
 ---------
