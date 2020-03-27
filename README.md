@@ -22,7 +22,7 @@ R
 
 Packages
 ---------
-shiny, ggplot2, shinyWidget, shinythemes, gapminder
+shiny, ggplot2, shinyWidget, shinythemes, gapminder, tidyverse, xml2, rvest, here", wordcloud, tm, treemapify, RColorBrewer, ggmap (kinda-sorta, needs your key), BiocManager, EBImage     
 
 Demo
 ------
