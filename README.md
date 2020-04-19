@@ -13,8 +13,8 @@ Mihir Patel
 
 Status
 ------
-90% done       
-*htmlwidgets are giving some trouble in Shiny so I'll see if I can implement them later.*
+Current: 90% done *htmlwidgets are giving some trouble in Shiny so I'll see if I can implement them later.*    
+Next: Implement html version for wordcloud and map.    
 
 Language
 ---------
