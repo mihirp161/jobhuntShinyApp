@@ -17,11 +17,13 @@ install_packs(c("tidyverse" , "shiny" , "shinyWidgets", "shinythemes", "xml2",
                 "rvest", "here", "wordcloud", "tm", "treemapify", "RColorBrewer", "ggmap",
                 "BiocManager", "directlabels"))
 
+# Un-CRAN packages
 # BiocManager::install("EBImage") #this package is wrapped inside an .exe
 library(EBImage)
 
-#--------------------------------------------------------------- Scrape the data --------------------------------------------
-# this is a procedure to scrap the local indeed.com Data Science jobs within 100 miles radius
+
+##--------------------------------------------------------------- Scrape the data --------------------------------------------
+## this is a procedure to scrap the local indeed.com Data Science jobs within 150 miles radius
 
 #please let me know if you would like to know how I got the start and the end page in indeed
 # scrape_results <- function(page_result_start, page_result_end, page_url){
@@ -135,6 +137,12 @@ data_engineer$job_description <- gsub("[\r\n]", "", data_engineer$job_descriptio
 all_df <- list(data_analyst, data_engineer, data_scientist)
 names(all_df) <- c("data_analyst", "data_engineer", "data_scientist")
 all_df <- Map(cbind, all_df, profession_df = names(all_df)) #here we have list of dataframe for each professional
+
+#get the rData file
+#save(data_scientist, data_analyst, data_engineer,all_df, file = "patel_final_project_rdata.RData")
+#save.image(file = "patel_final_project_rdata.RData") # creating ".RData" in current working directory
+#unlink("patel_final_project_rdata.RData")
+
 
 ### MAP (Recommended to leave this commented it takes time)
 
@@ -601,7 +609,7 @@ server <- function(input, output, session) {
       matrix <- as.matrix(dtm) 
       words <- sort(rowSums(matrix),decreasing= T) 
       df <- data.frame(word = names(words),freq=words)
-      df<- df[!(df$freq < 350), ] #drop the words less than 350 frequency
+      df<- df[!(df$freq < 350), ] #drop the words less than 350 frequency, leading to some crashes if I allow changes
       
       df<- df[!(df$word =="the" | df$word =="our" | df$word =="you" | df$word == "best" | df$word =="need" |
                    df$word =="use" | df$word =="part" | df$word =="make"| df$word =="well"| df$word =="this"), ] 
